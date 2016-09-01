@@ -18,13 +18,12 @@
         <div class="page-content">
             <div class="category-nav">
                 <ul class="category">
-                    <li class="category-item active"><a href="#">分类1</a></li>
-                    <li class="category-item"><a href="#">分类zz2</a></li>
-                    <li class="category-item"><a href="#">分类212313</a></li>
-                    <li class="category-item"><a href="#">分类2ooooo</a></li>
-                    <li class="category-item"><a href="#">分类2</a></li>
-                    <li class="category-item"><a href="#">分类</a></li>
-                    <li class="category-item"><a href="#">分类2</a></li>
+
+                    {% for category in site.categories %}
+
+                    <li class="category-item"><a href="/">{{ category | first }}</a></li>
+                    
+                    {% endfor %}
                 </ul>
             </div>
             <div class="dinner">{{ content }}</div>
