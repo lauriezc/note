@@ -8,6 +8,8 @@
         <script src="{{ site.baseurl}}/js/jquery.query-object.js"></script>
     </head>
     <body>
+        <span id="category_name"></span>
+        <span id="tag_name"></span>
         <header class="site-header">
             <div class="wrapper">
                 <a href="#" class="site-title">LaurieZC</a>
@@ -33,3 +35,19 @@
         <div class="footer"></div>
     </body>
 </html>
+<script>
+$(document).ready(function(){
+    $('.category-nav .category-item a').each(function() {
+        if($(this).text() == $('#category_name').text()) {
+            if(!$(this).hasClass('active')) {
+                $(this).addClass('active');
+            }
+        }
+        else {
+            if($(this).hassClass('active')) {
+                $(this).removeClass('active');
+            }
+        }
+    });
+});
+</script>
