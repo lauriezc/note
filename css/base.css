@@ -94,10 +94,11 @@ a {
 }
 
 .page-content {
-    margin-top:60px;
-}
-.page-content {
     width:840px;
     margin:auto;
+    margin-top:60px;
 }
 
+.dinner {
+
+}
