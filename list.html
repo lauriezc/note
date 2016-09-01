@@ -4,10 +4,18 @@ title: list
 ---
 
 <h2>{{ page.title }}</h2>
+<div class="list">
+    <ul>
+    </ul> 
+</div>
 
 <script>
 var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
     data = JSON.parse(dataStr),
-        curTag = $.query.get("c"),
-            archieves = data[curTag];
+    curTag = $.query.get("c"),
+    archieves = data[curTag];
+$(archieves).each(function(index,item){
+    var html = '<li><a href="' + item.url + '" >' + item.title + '</a>' + item.date + '</li>';
+    $('.list ul').append(html);
+});
 </script>
