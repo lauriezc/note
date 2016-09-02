@@ -39,24 +39,26 @@
 <script>
 $(document).ready(function(){
     var home = $('.index').length>0;
-    $('.category-nav .category-item a').each(function(index, item) {
-        if(home && index==0){
-            $(this).parent().addClass('active');
-        }
-        if($(this).text() == $('#category_name').text()) {
-            if(!$(this).parent().hasClass('active')) {
-                $(this).parent().addClass('active');
-            }
-        }
-        else {
-            if($(this).parent().hasClass('active')) {
-                $(this).parent().removeClass('active');
-            }
-        }
-    });
+    if(home && index==0){
+        $('.category-nav .category-item').eq(0).addClass('active');
+    }
     var category = $.query.get('c');
     if(category) {
         $('#category_name').text(category);
+    }
+    if($('#category_name').text().legnth>0) {
+        $('.category-nav .category-item a').each(function(index, item) {
+            if($(this).text() == $('#category_name').text()) {
+                if(!$(this).parent().hasClass('active')) {
+                    $(this).parent().addClass('active');
+                }
+            }
+            else {
+                if($(this).parent().hasClass('active')) {
+                    $(this).parent().removeClass('active');
+                }
+            }
+        });
     }
 });
 </script>
