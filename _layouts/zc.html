@@ -9,7 +9,7 @@
     </head>
     <body>
         <span id="category_name"></span>
-        <span id="tag_name"></span>
+        <span id="tag_name">{{ page.category }}</span>
         <header class="site-header">
             <div class="wrapper">
                 <a href="{{ site.baseurl }}/" class="site-title">LaurieZC</a>
@@ -50,5 +50,10 @@ $(document).ready(function(){
             }
         }
     });
+    var c = $.query.get('c');
+    alert(c);
+    if(c) {
+        $('#category_name').text(c);
+    }
 });
 </script>
