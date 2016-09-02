@@ -14,7 +14,6 @@ var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories
     data = JSON.parse(dataStr),
     curTag = $.query.get("c"),
     archieves = data[curTag];
-    $('#category_name').text(curTag);
 $(archieves).each(function(index,item){
     var html = '<li><a href="' + baseurl + item.url + '" >' + item.title + '</a>' + item.date + '</li>';
     $('.list ul').append(html);
