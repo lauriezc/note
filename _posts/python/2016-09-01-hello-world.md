@@ -3,6 +3,7 @@ layout: zc
 title: first python
 category: python
 ---
+
 ###{{ page.title }}
 
 > #print hello world.
