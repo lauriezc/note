@@ -43,7 +43,7 @@ $(document).ready(function(){
         $('.category-nav .category-item').eq(0).addClass('active');
     }
     var category = $.query.get('c');
-    if(category) {
+    if(category && category.length>0) {
         $('#category_name').text(category);
     }
     if($('#category_name').text().legnth>0) {
