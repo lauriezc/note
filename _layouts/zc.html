@@ -39,7 +39,7 @@
 <script>
 $(document).ready(function(){
     var home = $('.index').length>0;
-    if(home && index==0){
+    if(home){
         $('.category-nav .category-item').eq(0).addClass('active');
     }
     var category = $.query.get('c');
