@@ -54,9 +54,9 @@ a {
 /* end header */
 
 .category-nav {
-    float:left;
+    float:right;
     margin-top:36px;
-    margin-left:100px;
+    margin-right:100px;
 }
 
 .category {
@@ -68,7 +68,7 @@ a {
     padding:1px 3px;
     line-height:26px;
     vertical-align:middle;
-    text-align:right;
+    text-align:left;
     list-style:none;
 }
 
