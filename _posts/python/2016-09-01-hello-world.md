@@ -4,7 +4,7 @@ title: first python
 category: python
 ---
 
-###{{ page.title }}
+### {{ page.title }}
 
 > #print hello world.
 > print 'hello world!'
