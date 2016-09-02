@@ -46,7 +46,7 @@ $(document).ready(function(){
     if(category && category.length>0) {
         $('#category_name').text(category);
     }
-    if($('#category_name').text().legnth>0) {
+    if($('#category_name').text().length>0) {
         $('.category-nav .category-item a').each(function(index, item) {
             if($(this).text() == $('#category_name').text()) {
                 if(!$(this).parent().hasClass('active')) {
