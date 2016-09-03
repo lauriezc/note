@@ -60,19 +60,19 @@ a:hover {
 /* end header */
 
 .category-nav {
-    float:right;
+    float:left;
     margin-right:100px;
 }
 
 .category {
     margin:0 50px;
-    text-align:left;
+    text-align:right;
 }
 .category-item {
     padding:1px 3px;
     line-height:26px;
     vertical-align:middle;
-    text-align:left;
+    text-align:right;
     list-style:none;
 }
 
@@ -83,17 +83,16 @@ a:hover {
 }
 
 .category-item a:hover {
-    text-decoration:underline;
-    padding-left:19px;
-    border-left:1px solid #3a3a3a;
+    padding-right:19px;
+    border-right:1px solid #3a3a3a;
     color:#3a3a3a;
 }
 
 .category .active a {
     font-weight:700;
-    padding-left:18px;
+    padding-right:18px;
     text-decoration:underline;
-    border-left:2px solid #3a3a3a;
+    border-right:2px solid #3a3a3a;
     color:#3a3a3a;
 }
 
