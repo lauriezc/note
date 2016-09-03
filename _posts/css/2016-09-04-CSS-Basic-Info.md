@@ -4,10 +4,13 @@ title:CSS基础abcdef
 category: CSS
 ---
 
-### CSS基础知识
+### {{ page.title }}
 
----
 
----
+===
+abcdef
+===
 
+
+{{ page.date | date:"%d/%m/%Y"}}
 
