@@ -1,6 +1,6 @@
 ---
-layout:zc
-title:CSS基础abcdef
+layout: zc
+title: CSSabcdef
 category: CSS
 ---
 
