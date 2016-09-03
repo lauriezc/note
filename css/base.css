@@ -107,9 +107,8 @@ a:hover {
     margin:0 0 0 120px;
 }
 .dinner ul {
-    margin:50px;
+    margin-top:50px;
     padding:30px;
-    padding-right:100px;
 }
 .dinner ul li {
     list-style:none;
