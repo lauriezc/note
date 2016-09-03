@@ -4,10 +4,12 @@ title: list
 ---
 
 <h2>{{ page.title }}</h2>
-<div class="list">
-    <ul>
-    </ul> 
-</div>
+
+
+<ul class="list">
+    <li><span>2015-09-09</span><a href="#">abc</a></li>
+</ul>
+
 <script>
 var baseurl = '{{ site.baseurl }}';
 var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
@@ -15,7 +17,7 @@ var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories
     curTag = $.query.get("c"),
     archieves = data[curTag];
 $(archieves).each(function(index,item){
-    var html = '<li><a href="' + baseurl + item.url + '" >' + item.title + '</a>' + item.date + '</li>';
-    $('.list ul').append(html);
+    var html = '<li><span>' + item.date + '</span><a href="' + baseurl + item.url + '" >' + item.title + '</a></li>';
+    $('.list').append(html);
 });
 </script>
