@@ -11,6 +11,6 @@ category: python
 > print 'hello world!'
 >
 
-{{ page.date | date_to_string }}
+{{ page.date | date:"%d/%m/%Y" }}
 
 
