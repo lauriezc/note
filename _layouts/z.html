@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" content="text/html">
+        <title>{{ page.title }}</title>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/base.css" />
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="{{ site.baseurl}}/js/jquery.query-object.js"></script>
+    </head>
+    <body>
+        <span id="category_name">{{ page.category }}</span>
+        <span id="tag_name"></span>
+        <header class="site-header">
+            <div class="wrapper">
+                <a href="{{ site.baseurl }}/" class="site-title">LaurieZC</a>
+                <div class="site-nav">
+                    <a href="#">About</a>
+                    <a href="#">Github</a>
+                </div>
+            </div>
+        </header>
+        <div class="page-content">
+            <div class="category-nav">
+                <ul class="category">
+                    <li class="category-item"><a href="{{ site.baseurl }}/">HOME</a></li>
+
+                    {% for category in site.categories %}
+
+                    <li class="category-item"><a href="{{ site.baseurl }}/list.html?c={{ category | first }}">{{ category | first }}</a></li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="dinner markdown-body">{{ content }}</div>
+        </div>
+        <div class="footer"></div>
+    </body>
+</html>
+<script>
+$(document).ready(function(){
+    var home = $('.index').length>0;
+    if(home){
+        $('.category-nav .category-item').eq(0).addClass('active');
+    }
+    var category = $.query.get('c');
+    if(category && category.length>0) {
+        $('#category_name').text(category);
+    }
+    if($('#category_name').text().length>0) {
+        $('.category-nav .category-item a').each(function(index, item) {
+            if($(this).text() == $('#category_name').text()) {
+                if(!$(this).parent().hasClass('active')) {
+                    $(this).parent().addClass('active');
+                }
+            }
+            else {
+                if($(this).parent().hasClass('active')) {
+                    $(this).parent().removeClass('active');
+                }
+            }
+        });
+    }
+});
+</script>
