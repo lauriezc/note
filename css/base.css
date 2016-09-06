@@ -111,7 +111,7 @@ a:hover {
     margin:0;
     padding:0;
 }
-.dinner>ul>li {
+.dinner .list ul li {
     list-style:none;
     padding:8px 0;
 }
