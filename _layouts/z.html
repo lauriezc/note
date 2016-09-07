@@ -32,8 +32,9 @@
                 </ul>
             </div>
             <div class="dinner markdown-body">
+                <h2>{{ page.title }}</h2>
                 {{ content }}
-                <div class="date">{{ page.date | date:"%d/%m/%Y" }}</div>
+                <div class="date">posted: {{ page.date | date:"%d/%m/%Y" }}</div>
             </div>
         </div>
         <div class="footer"></div>
