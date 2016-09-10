@@ -6,24 +6,14 @@ body {
     font-size:12px;
 }
 
-.site-header a,
-.site-header a:hover,
-.site-header a:visited,
-.site-header a:link,
-.category-nav a,
-.category-nav a:hover,
-.category-nav a:visited,
-.category-nav a:link,
-.dinner .list a,
-.dinner .list a:hover,
-.dinner .list a:visited,
-.dinner .list a:link {
+a,
+a:hover,
+a:visited,
+a:link, {
     text-decoration:none;
     color:#5a5555;
 }
-.site-header a:hover,
-.category-nav a:hover,
-dinner .list a:hover,
+a:hover,
 {
     text-decoration:underline;
 }
