@@ -60,6 +60,9 @@ a:hover {
     font-size:26px;
     font-weight:300;
 }
+.site-title:hover {
+    color:#cacdd4;
+}
 /* end header */
 
 .category-nav {
@@ -91,6 +94,7 @@ a:hover {
     padding-right:19px;
     border-right:1px solid #3a3a3a;
     color:#3a3a3a;
+    text-decoration : underline;
 }
 
 .category .active a {
@@ -127,6 +131,11 @@ a:hover {
 }
 .dinner ul li a {
     padding:5px 0;
+}
+
+.dinner .list a:hover {
+    color:#5a5555;
+    text-decoration : underline;
 }
 
 #category_name {
