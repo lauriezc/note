@@ -6,35 +6,14 @@ body {
     font-size:12px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 a,
-a:visited,
-a:link, {
-    text-decoration:none;
-    color:#5a5555;
-}
-a:hover
-{
-    color:#5a5555;
-=======
-a,a:hover,
+a:hover,
 a:visited,
 a:link {
     text-decoration:none;
     color:#5a5555;
 }
 a:hover {
->>>>>>> parent of 3323bbf... change nav menu position fixed
-=======
-a,a:hover,
-a:visited,
-a:link {
-    text-decoration:none;
-    color:#5a5555;
-}
-a:hover {
->>>>>>> parent of 3323bbf... change nav menu position fixed
     text-decoration:underline;
 }
 
