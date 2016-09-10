@@ -7,7 +7,6 @@ body {
 }
 
 a,
-a:hover,
 a:visited,
 a:link, {
     text-decoration:none;
@@ -15,6 +14,7 @@ a:link, {
 }
 a:hover
 {
+    color:#5a5555;
     text-decoration:underline;
 }
 
