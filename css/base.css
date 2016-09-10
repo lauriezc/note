@@ -13,7 +13,7 @@ a:link, {
     text-decoration:none;
     color:#5a5555;
 }
-a:hover,
+a:hover
 {
     text-decoration:underline;
 }
@@ -46,6 +46,8 @@ a:hover,
 
 .site-nav a:hover {
     text-decoration:underline;
+    color:#cacdd4;
+
 }
 
 .site-header a {
