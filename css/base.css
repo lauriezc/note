@@ -68,7 +68,7 @@ a:hover {
 .category-nav {
     padding:20px 0 0 0;
     position : fixed;
-    margin-left : -30px;
+    margin-left : -45px;
 }
 
 .category {
@@ -113,7 +113,7 @@ a:hover {
 
 .dinner {
     padding:30px;
-    margin:50px 0 0 80px;
+    margin:50px 0 0 65px;
 }
 .dinner ul {
     margin:0;
