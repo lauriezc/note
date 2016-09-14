@@ -1,4 +1,5 @@
 ---
+layout : z
 title : "萍"
 category : "我也不知道我在说什么"
 ---
