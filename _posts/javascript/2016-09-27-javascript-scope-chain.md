@@ -35,7 +35,7 @@ category: "javascript"
     test();
 
 
-
+######作用域
 
 
 
