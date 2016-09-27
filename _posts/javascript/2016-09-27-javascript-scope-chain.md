@@ -35,7 +35,7 @@ category: "javascript"
     test();
 
 
-
+输出结果
 ![输出结果](https://github.com/lauriezc/note/raw/master/resource/image/AD759BC6-9F48-40C4-AA7B-02905405C435.png)
 
 
@@ -57,7 +57,7 @@ category: "javascript"
     console.log(myscope1);
 
 
-
+输出结果
 ![输出结果](https://github.com/lauriezc/note/raw/master/resource/image/55170F46-9F57-4415-A925-FD3C85696B6A.png)
 
 
