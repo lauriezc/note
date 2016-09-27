@@ -4,7 +4,6 @@ title: "JavaScript 作用域链"
 category: "javascript"
 ---
 
-### JavaScript 作用域链
 
 - 每一段JavaScript代码（全局代码或函数）都有一个与之关联的作用域链（scope chain)。这个作用域链是一个对象列表或者链表，这组对象定义了这段代码“作用域中”的变量。
 - 
@@ -18,3 +17,34 @@ category: "javascript"
 
 
 变量的作用域、变量的提前声明、闭包与作用域链有很紧密的关系。
+
+    function test(o) {
+        var i = 0;
+        console.log(j);//j已经声明，但是没有初始化
+        if (typeof o == "object") {
+            var j = 0;
+            for(var k=0; k < 10; k++) {
+                console.log(k);
+            }
+            console.log(k);
+        }
+        console.log(j);//j已经声明，可能没有初始化
+    }
+    test(new Date());
+    test();
+
+
+
+    cope = "global";
+    function checkscope2() {
+        scope = "local1";
+        myscope = "local2";//定义了一个全局变量
+        var myscope1 = "local3"//定义了一个checkscope2函数内部的局部变量
+        return [scope, myscope, myscope1];
+    }
+    console.log(checkscope2());
+    console.log(scope);
+    console.log(myscope);
+    console.log(myscope1);
+
+
