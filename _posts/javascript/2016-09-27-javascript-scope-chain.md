@@ -39,7 +39,7 @@ category: "javascript"
 ![输出结果](https://github.com/lauriezc/note/raw/master/resource/image/AD759BC6-9F48-40C4-AA7B-02905405C435.png)
 
 
-######作用域
+##### 作用域
 
 
 
