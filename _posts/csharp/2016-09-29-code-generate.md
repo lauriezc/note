@@ -20,7 +20,7 @@ MySql示例
 demo里面主要生成的代码是实体和sql命令以及调用dapper库执行sql返回结果的代码。
 这里数据表和视图有区别，数据表有增删查改，视图只能查询，而且数据表需要有自增或者主键才能执行update和delete，这里采用的是EntityFramework的db first里面不生成没有主键的数据表对应的代码的机制。
 如分页方法：
-   public static Pager GetPageList(int pageIndex, int pageSize, string where="1=1", string orderField="id DESC")
+    public static Pager GetPageList(int pageIndex, int pageSize, string where="1=1", string orderField="id DESC")
         {
             string sql=string.Format("SELECT TOP {0} * FROM [dbo].[all_t] WHERE {1} AND id NOT IN (SELECT TOP {2} id FROM [dbo].[all_t] WHERE {1}) ORDER BY {3};", pageSize, where, (pageIndex-1)*pageSize, orderField);
             string countSql=string.Format("SELECT COUNT(0) FROM [dbo].[all_t] WHERE {0};", where);
