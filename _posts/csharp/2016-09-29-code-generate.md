@@ -67,36 +67,6 @@ c sharp类型的映射，这里MySql和SQLServer的类型映射也有部分的�
                 return _mySqlDataType;
             }
         }
-        /*
-        public bool bit { get; set; }
-        public sbyte tinyint { get; set; }
-        public short smallint { get; set; }
-        public int mediumint { get; set; }
-        public int @int { get; set; }
-        public int integer { get; set; }
-        public long bigint { get; set; }
-        public double real { get; set; }
-        public double @double { get; set; }
-        public float @float { get; set; }
-        public decimal @decimal { get; set; }
-        public decimal numeric { get; set; }
-        public string @char { get; set; }
-        public string varchar { get; set; }
-        public byte[] binary { get; set; }
-        public byte[] varbinary { get; set; }
-        public System.DateTime date { get; set; }
-        public System.TimeSpan time { get; set; }
-        public System.DateTime datetime { get; set; }
-        public System.DateTime timestamp { get; set; }
-        public short year { get; set; }
-        public byte[] binyblob { get; set; }
-        public byte[] blob { get; set; }
-        public byte[] mediumblob { get; set; }
-        public byte[] longblob { get; set; }
-        public string tinytext { get; set; }
-        public string text { get; set; }
-        public string mediumtext { get; set; }
-        */
 
         private Hashtable _sqlDataType;
 
@@ -138,36 +108,6 @@ c sharp类型的映射，这里MySql和SQLServer的类型映射也有部分的�
                 _sqlDataType.Add("xml", "string");
                 return _sqlDataType;
                 #endregion
-                /*public long bigint { get; set; }
-        public byte[] binary { get; set; }
-        public Nullable<bool> bit { get; set; }
-        public string @char { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
-        public Nullable<System.DateTime> datetime { get; set; }
-        public Nullable<System.DateTime> datetime2 { get; set; }
-        public Nullable<System.DateTimeOffset> datetimeoffset { get; set; }
-        public Nullable<decimal> @decimal { get; set; }
-        public Nullable<double> @float { get; set; }
-        public byte[] image { get; set; }
-        public Nullable<int> @int { get; set; }
-        public Nullable<decimal> money { get; set; }
-        public string nchar { get; set; }
-        public string ntext { get; set; }
-        public Nullable<decimal> numeric { get; set; }
-        public string nvarchar { get; set; }
-        public Nullable<float> real { get; set; }
-        public Nullable<System.DateTime> smalldatetime { get; set; }
-        public Nullable<short> smallint { get; set; }
-        public Nullable<decimal> smallmoney { get; set; }
-        public string text { get; set; }
-        public Nullable<System.TimeSpan> time { get; set; }
-        public byte[] timestamp { get; set; }
-        public Nullable<byte> tinyint { get; set; }
-        public Nullable<System.Guid> uniqueidentifier { get; set; }
-        public byte[] varbinary { get; set; }
-        public string varchar { get; set; }
-        public string xml { get; set; }
-                 */
             }
         }
     }
