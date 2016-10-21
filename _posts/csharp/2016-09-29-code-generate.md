@@ -111,6 +111,8 @@ c sharp类型的映射，这里MySql和SQLServer的类型映射也有部分的�
             }
         }
     }
+
+
 demo里面主要生成的代码是实体和sql命令以及调用dapper库执行sql返回结果的代码。
 这里数据表和视图有区别，数据表有增删查改，视图只能查询，而且数据表需要有自增或者主键才能执行update和delete，这里采用的是EntityFramework的db first里面不生成没有主键的数据表对应的代码的机制。
 如分页方法：
