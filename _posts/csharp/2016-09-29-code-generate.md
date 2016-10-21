@@ -1,10 +1,10 @@
 ---
 layout: z
-title: "T4 template代码生成模板生成实体和dapper为基础的数据访问方法"
+title: "T4 template生成实体和dapper为基础的数据访问方法"
 category: "CSharp"
 ---
 
-[T4 template]( "T4 template")是一个文本生成引擎，可以生成cs文件。
+[T4 template](http://msdn.microsoft.com/zh-cn/library/bb126445 "T4 template")是一个文本生成引擎，可以生成cs文件。
 用文本生成引擎生成代码，可以节省部分编码时间，缺点是不够灵活。
 
 ##### 数据库中的数据结构
@@ -57,3 +57,6 @@ demo里面主要生成的代码是实体和sql命令以及调用dapper库执行s
             }
         }
     } 
+
+
+详细代码看[这里](https://github.com/lauriezc/dapper-demo)
