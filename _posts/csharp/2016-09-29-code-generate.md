@@ -12,7 +12,15 @@ category: "CSharp"
 SQLServer每个数据库里面都有相对应的table和column视图，也是联合查询，只是SQLServer里面的有些字段的约束不是放在columns视图内，例如主键约束。
 MySql示例
 
-    SELECT c.`TABLE_SCHEMA`,c.`TABLE_NAME`,c.`COLUMN_NAME`,c.`ORDINAL_POSITION`,c.`COLUMN_DEFAULT`,c.`IS_NULLABLE`,c.`DATA_TYPE`,c.`CHARACTER_MAXIMUM_LENGTH`,c.`CHARACTER_OCTET_LENGTH`,c.`NUMERIC_PRECISION`,c.`NUMERIC_SCALE`,c.`DATETIME_PRECISION`,c.`CHARACTER_SET_NAME`,c.`COLUMN_KEY`,c.`EXTRA`,t.TABLE_TYPE from   information_schema.`COLUMNS` c LEFT JOIN information_schema.`TABLES` t ON t.TABLE_NAME=c.TABLE_NAME  WHERE c.`TABLE_SCHEMA`='{0}'
+    SELECT 
+    c.`TABLE_SCHEMA`,c.`TABLE_NAME`,c.`COLUMN_NAME`,c.`ORDINAL_POSITION`,c.`COLUMN_DEFAULT`,c.`IS_NULLABLE`,c.`DATA_TYPE`,c.`CHARACTER_MAXIMUM_LENGTH`,c.`CHARACTER_OCTET_LENGTH`,c.`NUMERIC_PRECISION`,c.`NUMERIC_SCALE`,c.`DATETIME_PRECISION`,c.`CHARACTER_SET_NAME`,c.`COLUMN_KEY`,c.`EXTRA`,t.TABLE_TYPE 
+    from 
+    information_schema.`COLUMNS` c 
+    LEFT JOIN
+    information_schema.`TABLES` t 
+    ON 
+    t.TABLE_NAME=c.TABLE_NAME  
+    WHERE c.`TABLE_SCHEMA`='{0}'
 
 
 
@@ -20,8 +28,9 @@ MySql示例
 demo里面主要生成的代码是实体和sql命令以及调用dapper库执行sql返回结果的代码。
 这里数据表和视图有区别，数据表有增删查改，视图只能查询，而且数据表需要有自增或者主键才能执行update和delete，这里采用的是EntityFramework的db first里面不生成没有主键的数据表对应的代码的机制。
 如分页方法：
+
     public static Pager GetPageList(int pageIndex, int pageSize, string where="1=1", string orderField="id DESC")
-        {
+    {
             string sql=string.Format("SELECT TOP {0} * FROM [dbo].[all_t] WHERE {1} AND id NOT IN (SELECT TOP {2} id FROM [dbo].[all_t] WHERE {1}) ORDER BY {3};", pageSize, where, (pageIndex-1)*pageSize, orderField);
             string countSql=string.Format("SELECT COUNT(0) FROM [dbo].[all_t] WHERE {0};", where);
             using(var con = new SqlConnection(_connectionString))
