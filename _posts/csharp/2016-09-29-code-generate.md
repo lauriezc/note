@@ -1,5 +1,5 @@
 ---
-lyaout: z
+layout: z
 title: "T4 template代码生成模板生成实体和dapper为基础的数据访问方法"
 category: "CSharp"
 ---
