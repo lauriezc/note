@@ -75,10 +75,12 @@ JavaScript的继承主要是对constructor和prototype的继承，对prototype�
 
         //private static member
         var member1;
-        //public static property
-        Test.property2 = 1; 
         //private static method
         function method2() { }
+        
+        //public static property
+        Test.property2 = 1; 
+        
         //public static method
          Test.method3 = function(){ };
     })();
