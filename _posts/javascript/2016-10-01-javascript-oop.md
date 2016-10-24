@@ -54,3 +54,33 @@ JavaScript的继承主要是对constructor和prototype的继承，对prototype�
     child.method1();
 
 
+##### demo
+
+
+    (function(){
+        //constructor
+        Test = function(a,b) {
+            //public object members
+            this.A=a;
+            this.B=b;
+            //private object member
+            var C = 0;
+            //private object method
+            function method0() { }
+        }
+        //public method of object
+        Test.prototype.method1 = function(n) { console.log('method1'); };
+        //public property of object
+        Test.prototype.proterty1 = function(){ return 1; };
+
+        //private static member
+        var member1;
+        //public static property
+        Test.property2 = 1; 
+        //private static method
+        function method2() { }
+        //public static method
+         Test.method3 = function(){ };
+    })();
+    var test= new Test(123,123);
+    test.method1();
