@@ -54,17 +54,3 @@ JavaScript的继承主要是对constructor和prototype的继承，对prototype�
     child.method1();
 
 
-##### 多态
-JavaScript的多态可以用call和apply来实现，而call和apply的区别也仅仅只是参数上的区别，下面是以apply为例的实现：
-
-
-    Test = function(o) {
-        this.O = o;
-    }
-    Test.prototype.method1 = function() {
-        O.method1.apply(this,[]);
-    }
-    var t1 = new Test(new Obj(123));
-    var t2 = new Test(new Child(123));
-    t1.method1();
-    t2.method1();
