@@ -31,6 +31,8 @@ prototype是JavaScript的一个强制命名，prototype内主要是类对象可�
 因为解释性语言编译的过程,JavaScript没有像Java和CSharp那样有简单的继承语法糖。
 JavaScript的继承主要是对constructor和prototype的继承，对prototype里面的内容的重用，除了prototype之外还可以用call和apply来实现。
 对上面的Obj进行派生子类：
+
+
     //prototype方式实现
     Child = function(a) {
         this.A = a;
@@ -54,6 +56,8 @@ JavaScript的继承主要是对constructor和prototype的继承，对prototype�
 
 ##### 多态
 JavaScript的多态可以用call和apply来实现，而call和apply的区别也仅仅只是参数上的区别，下面是以apply为例的实现：
+
+
     Test = function(o) {
         this.O = o;
     }
