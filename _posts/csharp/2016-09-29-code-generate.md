@@ -1,7 +1,7 @@
 ---
 layout: z
 title: "T4 template生成实体和dapper为基础的数据访问方法"
-category: "CSharp"
+category: "csharp"
 ---
 
 <b>[T4 template](http://msdn.microsoft.com/zh-cn/library/bb126445 "T4 template")</b>是一个文本生成引擎，可以生成cs文件。
