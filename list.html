@@ -13,7 +13,7 @@ var dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories
     curTag = $.query.get("c"),
     archieves = data[curTag];
 $(archieves).each(function(index,item){
-    var html = '<li><span>' + item.date + '</span><a href="' + baseurl + item.url + '" >' + item.title + '</a></li>';
+    var html = '<li><a href="' + baseurl + item.url + '" ><span>' + item.date + '</span>' + item.title + '</a></li>';
     $('.list').append(html);
 });
 </script>
