@@ -126,7 +126,6 @@ a:hover {
 .dinner ul li span:after {
     content:"";
     padding:0px 5px;
-    margin-right:5px;
 }
 .dinner ul li a {
     padding:5px 0;
