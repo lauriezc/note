@@ -85,7 +85,7 @@ MVC4下要将list对象格式化成字符串,将contentType头设置成json格�
 JQuery AJAX在提交数据之前会格式化data，而且默认提交的数据内容格式是：application/x-www-form-urlencoded。
 以下是对应参数下AJAX产生的Request数据：
 
-###### 1
+###### 1 以表单的格式
 
     $.ajax({
        'url' : '/controller/ReceiveArray',
@@ -99,7 +99,7 @@ JQuery AJAX在提交数据之前会格式化data，而且默认提交的数据�
 
 ![请求信息](https://github.com/lauriezc/note/raw/master/resource/image/simple.png)
 
-###### 2
+###### 2 格式化的对象
 
 
     $.ajax({
@@ -116,7 +116,7 @@ JQuery AJAX在提交数据之前会格式化data，而且默认提交的数据�
 
 ![请求信息](https://github.com/lauriezc/note/raw/master/resource/image/nostringify.png)
 
-###### 3
+###### 3 json格式
 
 
     $.ajax({
